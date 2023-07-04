@@ -95,6 +95,12 @@
                         update: {method: 'PUT', params: {surveyId: '@surveyId'}},
                         activateOrDeactivate: {method: 'POST', params: {surveyId: '@surveyId',command: '@command'}},
                     }),
+
+                    tasksResource: defineResource(apiVer + "/tasks/:taskId", {taskId: '@taskId'}, {
+                        getAll: {method: 'GET', params: {status: '@status'}, isArray: true},
+                        get: {method: 'GET', params: {taskId: '@taskId'}, isArray: false},
+                        update: {method: 'PUT', params: {surveyId: '@taskId'}},
+                    }),
                     surveyScorecardResource: defineResource(apiVer + "/surveys/scorecards/:surveyId", {surveyId: '@surveyId'}, {
                         post: {method: 'POST', params: {}, isArray: false}
                     }),
@@ -520,7 +526,7 @@
                     loanRescheduleResource: defineResource(apiVer + "/rescheduleloans/:scheduleId",{scheduleId:'@scheduleId', command: '@command'},{
                      get: {method: 'GET',params:{}},
                      getAll: {method: 'GET', params: {}, isArray: true},
-                     template: {method: 'GET',params:{}},
+                     template: {method: 'GET',params:{loanId:'@loanId'}},
                      preview:{method:'GET',params:{command:'previewLoanReschedule'}},
                      put: {method: 'POST', params: {command:'reschedule'}},
                      reject:{method:'POST',params:{command:'reject'}},

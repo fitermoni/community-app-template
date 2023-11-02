@@ -14,7 +14,7 @@
                     name: data.name,
                     unitType: data.unitType,
                     basePrice: data.basePrice,
-                    type: data.quality,
+                    quality: data.quality,
                     pctToBase: data.pctToBase,
                     currency: data.currency
                 };

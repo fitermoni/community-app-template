@@ -227,10 +227,6 @@
                                 taskPermissionName: 'DELETE_LOAN'
                             },
                             {
-                                name: "button.addcollateral",
-                                taskPermissionName: 'CREATE_COLLATERAL'
-                            },
-                            {
                                 name: "button.listguarantor",
                                 taskPermissionName: 'READ_GUARANTOR'
                             },

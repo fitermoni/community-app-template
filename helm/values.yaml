@@ -13,6 +13,7 @@ fineract-ui:
        mountFileName: "default.conf.template"
 
   env:
+    CLIENT_MAX_UPLOAD_SIZE: 10M
     FINERACT_DOMAIN: "mifos.staging.rank.africa"
     FINERACT_BASE_URL: "/fineract-provider/api/v1"
     FINERACT_PROXY_URL: "https://backend-fineract-rest:8443"

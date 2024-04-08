@@ -97,6 +97,7 @@
                 //Rate Module
                 scope.rateOptions = scope.product.rateOptions || [];
                 scope.enableRates = scope.product.isRatesEnabled;
+                scope.formData.loanTermIncludesToppedUpLoanTerm = scope.product.loanTermIncludesToppedUpLoanTerm;
             });
 
              scope.$watch('formData',function(newVal){

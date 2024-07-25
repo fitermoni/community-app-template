@@ -36,6 +36,7 @@
                     accountNo: data.accountNo,
                     staffId: data.staffId,
                     externalId: data.externalId,
+                    bvn: data.bvn,
                     isStaff:data.isStaff,
                     mobileNo: data.mobileNo,
                     savingsProductId: data.savingsProductId,

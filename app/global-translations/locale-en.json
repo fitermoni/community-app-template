@@ -4649,5 +4649,6 @@
   "task.status.blocked": "BLOCKED",
   "task.status.progress": "IN PROGRESS",
   "task.status.completed": "COMPLETED",
+  "label.input.BVN" : "BVN",
   "----End---": "--End of file--- "
 }

@@ -9,5 +9,6 @@ appVersion: 1.0.1
 dependencies:
   - name: fineract
     version: "0.1.4"
-    alias: fineract-rest
+    alias: fineract-ui
     repository: "@fiter-apps"
+    

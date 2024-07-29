@@ -1,18 +1,13 @@
 apiVersion: v2
-name: fiter-app
-description: Sample Application
+name: fineract
+description: Fineract Backend Application
 
 type: application
-version: 0.0.1
-appVersion: 0.0.1
+version: 0.0.2
+appVersion: 1.0.1
 
 dependencies:
-  - name: fiter-base-apps
-    version: '0.0.2'
-    alias: community-app
-    repository: "oci://public.ecr.aws/p4j9q0b3"
-  - name: fiter-base-apps
-    version: '0.0.2'
-    alias: fineract
-    repository: "oci://public.ecr.aws/p4j9q0b3"
-    
+  - name: fineract
+    version: "0.1.4"
+    alias: fineract-rest
+    repository: "@fiter-apps"

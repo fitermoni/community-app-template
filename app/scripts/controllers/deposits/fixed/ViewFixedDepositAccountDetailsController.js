@@ -377,6 +377,9 @@
                     }
                 });
             };
+            scope.viewJournalEntries = function(){
+                location.path("/searchtransaction/").search({savingsId: scope.savingaccountdetails.id});
+            };
             scope.viewAccrualTransaction = function(){
                 location.path("/viewaccrualtransaction/").search({fixedDepositId: scope.savingaccountdetails.id});
                 };
@@ -412,6 +415,14 @@
                 $scope.cancel = function () {
                     $uibModalInstance.dismiss('cancel');
                 };
+            };
+
+            scope.checkStatus = function(){
+                if(scope.status == 'Active' || scope.status == 'Closed' || scope.status == 'Transfer in progress' ||
+                scope.status == 'Transfer on hold' || scope.status == 'Premature Closed' || scope.status == 'Matured'){
+                    return true;
+                }
+                return false;
             };
         }
     });

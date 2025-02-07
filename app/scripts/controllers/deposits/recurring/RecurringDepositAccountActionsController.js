@@ -66,7 +66,7 @@
                     scope.labelName = 'label.input.transactiondate';
                     scope.modelName = 'transactionDate';
                     scope.showDateField = true;
-                    scope.showNoteField = false;
+                    scope.showNoteField = true;
                     scope.isTransaction = true;
                     scope.showPaymentDetails = false;
                     scope.showPaymentType=true;

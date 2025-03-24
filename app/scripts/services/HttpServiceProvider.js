@@ -55,6 +55,9 @@
                     this.setTwoFactorAccessToken = function (token) {
                         http.defaults.headers.common['Fineract-Platform-TFA-Token'] = token;
                     }
+                    this.setTenantIdentifier = function (tenantIdentifier){
+                        http.defaults.headers.common['Fineract-Platform-TenantId'] = tenantIdentifier;
+                    }
                 };
                 return new HttpService();
             }];

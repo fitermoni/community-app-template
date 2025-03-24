@@ -1,6 +1,7 @@
 (function(mifosX) {
     var defineHeaders = function($httpProvider, $translateProvider, ResourceFactoryProvider, HttpServiceProvider, $idleProvider, $keepaliveProvider, IDLE_DURATION, WARN_DURATION, KEEPALIVE_INTERVAL, FINERACT_BASE_URL) {
         var mainLink = getLocation(window.location.href);
+        console.log("mainLink ---->"+mainLink)
         var baseApiUrl = "https://demo.mifos.io";
         var host = "";
         var portNumber = "";
@@ -25,25 +26,9 @@
         }
         //accessing from a file system or other servers
         else {
-            var baseApiUrlEnv = FINERACT_BASE_URL;
+            // var baseApiUrlEnv = FINERACT_BASE_URL;
+            host = "https://localhost:8080";
 
-            if (mainLink.hostname != "") {
-                baseApiUrl = "https://" + mainLink.hostname + (mainLink.port ? ':' + mainLink.port : '');
-            }
-
-            if (QueryParameters["baseApiUrl"]) {
-                baseApiUrl = QueryParameters["baseApiUrl"];
-            }
-
-            if (baseApiUrlEnv !== '$FINERACT_BASE_URL') {
-                baseApiUrl = baseApiUrlEnv;
-            }
-
-            var queryLink = getLocation(baseApiUrl);
-            host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
-            portNumber = queryLink.port;
-
-            $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
             ResourceFactoryProvider.setTenantIdenetifier('default');
             if (QueryParameters["tenantIdentifier"]) {
                 $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = QueryParameters["tenantIdentifier"];

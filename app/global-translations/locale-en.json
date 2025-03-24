@@ -2052,6 +2052,7 @@
   "label.anchor.holdaccount": "Hold Account",
   "#Inputs": "..",
   "label.input.charges": "Charges",
+  "label.input.tenantId": "Tenant Id",
   "label.input.chargecalculation": "Charge calculation",
   "label.input.chargetimetype": "Charge time type",
   "label.input.dueon": "Due on",

@@ -95,6 +95,14 @@
                             <form class="form">
 
                                 <div class="form-group">
+                                    <label for="tenantIdentifier">{{ 'label.input.tenantId' | translate | uppercase }}</label>
+                                    <input type="text" name="tenantIdentifier" id="tenantIdentifier" class="form-control"
+                                           ng-model="loginCredentials.tenantIdentifier"
+                                           placeholder="{{ 'label.input.tenantId' | translate |lowercase }}"
+                                           required/>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="uid">{{ 'label.input.username' | translate | uppercase }}</label>
                                     <input type="text" name="username" id="uid" class="form-control"
                                            ng-model="loginCredentials.username"

@@ -7,7 +7,7 @@
                 scope.savingproduct.productType = productType ? productType.name: '';
                 let productCategory = data.productCategories.filter(pc=>pc.id===data.productCategoryId)[0]
                 scope.savingproduct.productCategory = productCategory ? productCategory.name: '';
-                scope.chartSlabs = scope.depositproduct.activeChart.chartSlabs;
+                scope.chart = scope.product && scope.product.activeChart ? scope.product.activeChart : {};
                 scope.hasAccounting = data.accountingRule.id == 2 || data.accountingRule.id == 3 ? true : false;
             });
 

@@ -61,7 +61,6 @@
                     shortName: scope.product.shortName,
                     description: scope.product.description,
                     fundId: scope.product.fundId,
-                    description: scope.product.description,
                     includeInBorrowerCycle: scope.product.includeInBorrowerCycle,
                     useBorrowerCycle: scope.product.useBorrowerCycle,
                     currencyCode: scope.product.currency.code,
@@ -152,7 +151,6 @@
 
                 }
                 if(scope.product.allowAttributeOverrides != null){
-                    console.log('scope.product.allowAttributeOverrides : ',scope.product.allowAttributeOverrides);
                     scope.amortization = scope.product.allowAttributeOverrides.amortizationType;
                     scope.arrearsTolerance = scope.product.allowAttributeOverrides.inArrearsTolerance;
                     scope.graceOnArrearsAging = scope.product.allowAttributeOverrides.graceOnArrearsAgeing;
@@ -211,10 +209,10 @@
                 });
 
                 scope.setFlag();
-                if (scope.formData.accountingRule == 2 || scope.formData.accountingRule == 3 || scope.formData.accountingRule == 4) {
+                if (scope.formData.accountingRule === 2 || scope.formData.accountingRule === 3 || scope.formData.accountingRule === 4) {
                     scope.formData.fundSourceAccountId = scope.product.accountingMappings.fundSourceAccount.id;
                     scope.formData.loanPortfolioAccountId = scope.product.accountingMappings.loanPortfolioAccount.id;
-                    if (scope.formData.accountingRule == 3 || scope.formData.accountingRule == 4) {
+                    if (scope.formData.accountingRule === 3 || scope.formData.accountingRule === 4) {
                         scope.formData.receivableInterestAccountId = scope.product.accountingMappings.receivableInterestAccount.id;
                         scope.formData.receivableFeeAccountId = scope.product.accountingMappings.receivableFeeAccount.id;
                         scope.formData.receivablePenaltyAccountId = scope.product.accountingMappings.receivablePenaltyAccount.id;

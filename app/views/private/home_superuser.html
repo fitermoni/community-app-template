@@ -1,6 +1,11 @@
 <div class="content-container">
 <div class="card well" id="expertsearch" data-ng-controller="ExpertSearchController">
-    <h3 class="paddedleft"><strong>{{'label.heading.welcome' | translate}}, {{currentSession.user.name}}</strong>
+    <h3 class="paddedleft"><strong>{{'label.heading.welcome' | translate}}
+      <span ng-switch="tenantIdentifier">
+        <span ng-switch-when="default">Rank Capital,</span>
+        <span ng-switch-when="rankmfb">Rank Microfinance Bank,</span>
+        <span ng-switch-default>{{tenantIdentifier | uppercase}}</span>
+      </span>{{currentSession.user.name}}</strong>
     	<div class="btn-group pull-right">
 	        <label class="btn btn-primary" ng-model="dashModel" btn-radio="'dashboard'"><i class="fa fa-home"></i>&nbsp;&nbsp;{{'label.heading.home' | translate}}</label>
 	        <label class="btn btn-primary" ng-click="switch()" ng-model="dashModel" btn-radio="'rich-dashboard'"><i class="fa fa-tachometer"></i>&nbsp;&nbsp;{{'label.heading.dashboard' | translate}}</label>

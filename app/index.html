@@ -398,8 +398,16 @@
                 <!-- Footer -->
                 <br><br>
                 <footer>
-                    <p align="center"><a
-                            href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"
+
+                    <p align="center">
+
+                    <span ng-switch="tenantIdentifier">
+                    <span ng-switch-when="default">Rank Capital,</span>
+                    <span ng-switch-when="rankmfb">Rank Microfinance Bank,</span>
+                    <span ng-switch-default>{{tenantIdentifier | uppercase}}</span>
+                    </span>
+
+                        <a  href="https://mifosforge.jira.com/browse/MIFOSX/component/11710/?selectedTab=com.atlassian.jira.jira-projects-plugin:component-changelog-panel"
                             target="_blank"> {{'label.relVersion' | translate}} {{version}} | {{'label.relDate' |
                         translate}} {{releasedate}} </a></p>
                 </footer>

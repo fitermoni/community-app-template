@@ -4651,5 +4651,6 @@
   "task.status.progress": "IN PROGRESS",
   "task.status.completed": "COMPLETED",
   "label.input.BVN" : "BVN",
+  "error.msg.import.in.progress":"A file is currently being processed. Please wait until it is completed before uploading another file.",
   "----End---": "--End of file--- "
 }
